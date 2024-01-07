@@ -16,9 +16,9 @@
 
 #include "modules/perception/common/inference/tensorrt/batch_stream.h"
 
+#include "modules/perception/common/inference/tensorrt/rt_legacy.h"
 #ifdef NV_TENSORRT_MAJOR
     #if NV_TENSORRT_MAJOR == 8
-    #include "modules/perception/common/inference/tensorrt/rt_legacy.h"
     #endif
 #endif
 

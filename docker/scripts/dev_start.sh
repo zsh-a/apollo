@@ -30,7 +30,7 @@ CO_DEV_PATH=
 SUPPORTED_ARCHS=(x86_64 aarch64)
 TARGET_ARCH="$(uname -m)"
 
-VERSION_X86_64="dev-x86_64-18.04-20230831_1143"
+VERSION_X86_64="dev-x86_64-18.04-20231128_2222_4090"
 TESTING_VERSION_X86_64="dev-x86_64-18.04-testing-20210112_0008"
 
 VERSION_AARCH64="dev-aarch64-20.04-20231024_1054"
@@ -448,10 +448,10 @@ function main() {
     info "Start docker container based on local image : ${DEV_IMAGE}"
   fi
 
-  if ! docker_pull "${DEV_IMAGE}"; then
-    error "Failed to pull docker image ${DEV_IMAGE}"
-    exit 1
-  fi
+  # if ! docker_pull "${DEV_IMAGE}"; then
+  #   error "Failed to pull docker image ${DEV_IMAGE}"
+  #   exit 1
+  # fi
 
   info "Remove existing Apollo Development container ..."
   remove_container_if_exists ${DEV_CONTAINER}
